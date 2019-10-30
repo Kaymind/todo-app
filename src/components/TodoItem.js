@@ -8,10 +8,10 @@ const TodoItem = ({ todo }) => {
   const { removeTodo, updateTodo, doneTodo } = useContext(TodoContext);
   return (
     <tr>
-      <td style={{ width: "50%" }}>
+      <td className="p-3">
         <span className={todo.complete ? "todo-marked" : ""}>{todo.text}</span>
       </td>
-      <td style={{ width: "50%" }}>
+      <td>
         {!todo.complete && (
           <Link className="btn" to="" onClick={() => doneTodo(todo.id)}>
             Done

@@ -34,7 +34,8 @@ const TodoContextProvider = (props) => {
     // Remove the todo item
     const removeTodo = id => {
         const removeTodo = todos.filter(todo => todo.id !== id)
-        setTodos(removeTodo);
+        setTodos(removeTodo)
+        setEditTodo(null)
         localStorage.setItem('todos',JSON.stringify(removeTodo))
     }
     // Alter todo item

@@ -20,6 +20,8 @@ const TodoInput = () => {
   useEffect(() => {
     if (editTodo !== null) {
       setTodoText(editTodo.text);
+    } else {
+      setTodoText("");
     }
   }, [editTodo]);
 
